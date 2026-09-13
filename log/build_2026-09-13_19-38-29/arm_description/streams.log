@@ -1,0 +1,25 @@
+[2.414s] Invoking command in '/home/migara/robot_ws/build/arm_description': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/migara/robot_ws/build/arm_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/migara/robot_ws/install/arm_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/migara/robot_ws/build/arm_description/build --no-deps symlink_data
+[3.356s] running develop
+[3.944s] running egg_info
+[3.945s] creating arm_description.egg-info
+[4.040s] writing arm_description.egg-info/PKG-INFO
+[4.047s] writing dependency_links to arm_description.egg-info/dependency_links.txt
+[4.048s] writing requirements to arm_description.egg-info/requires.txt
+[4.049s] writing top-level names to arm_description.egg-info/top_level.txt
+[4.051s] writing manifest file 'arm_description.egg-info/SOURCES.txt'
+[4.197s] reading manifest file 'arm_description.egg-info/SOURCES.txt'
+[4.206s] writing manifest file 'arm_description.egg-info/SOURCES.txt'
+[4.236s] running build_ext
+[4.236s] Creating /home/migara/robot_ws/install/arm_description/lib/python3.12/site-packages/arm-description.egg-link (link to .)
+[4.237s] 
+[4.237s] Installed /home/migara/robot_ws/build/arm_description
+[4.237s] running symlink_data
+[4.237s] creating /home/migara/robot_ws/install/arm_description/share/ament_index
+[4.238s] creating /home/migara/robot_ws/install/arm_description/share/ament_index/resource_index
+[4.238s] creating /home/migara/robot_ws/install/arm_description/share/ament_index/resource_index/packages
+[4.238s] symbolically linking /home/migara/robot_ws/build/arm_description/resource/arm_description -> /home/migara/robot_ws/install/arm_description/share/ament_index/resource_index/packages
+[4.238s] symbolically linking /home/migara/robot_ws/build/arm_description/package.xml -> /home/migara/robot_ws/install/arm_description/share/arm_description
+[4.238s] creating /home/migara/robot_ws/install/arm_description/share/arm_description/urdf
+[4.239s] symbolically linking /home/migara/robot_ws/build/arm_description/urdf/arm.xacro -> /home/migara/robot_ws/install/arm_description/share/arm_description/urdf
+[4.239s] creating /home/migara/robot_ws/install/arm_description/share/arm_description/meshes
+[4.291s] Invoked command in '/home/migara/robot_ws/build/arm_description' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/migara/robot_ws/build/arm_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/migara/robot_ws/install/arm_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/migara/robot_ws/build/arm_description/build --no-deps symlink_data
