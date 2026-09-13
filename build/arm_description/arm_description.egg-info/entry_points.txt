@@ -1,0 +1,5 @@
+[console_scripts]
+arm_mover = arm_bringup.arm_mover:main
+color_detector = arm_bringup.color_detector:main
+ik_mover = arm_bringup.ik_mover:main
+vision_mover = arm_bringup.vision_mover:main
