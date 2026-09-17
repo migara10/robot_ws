@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<robot name="arm" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <material name="grey"><color rgba="0.6 0.6 0.6 1"/></material>
+  <material name="blue"><color rgba="0.2 0.4 0.8 1"/></material>
+
+  <link name="base_link">
+    <visual>
+      <geometry><cylinder radius="0.05" length="0.03"/></geometry>
+      <material name="grey"/>
+    </visual>
+    <collision>
+      <geometry><cylinder radius="0.05" length="0.03"/></geometry>
+    </collision>
+  </link>
+
+  <!-- Joint 1: Base rotation -->
+  <link name="link1">
+    <visual><origin xyz="0 0 0.05"/><geometry><cylinder radius="0.03" length="0.10"/></geometry><material name="blue"/></visual>
+    <collision><origin xyz="0 0 0.05"/><geometry><cylinder radius="0.03" length="0.10"/></geometry></collision>
+  </link>
+  <joint name="base_to_link1" type="revolute">
+    <parent link="base_link"/><child link="link1"/>
+    <origin xyz="0 0 0.015" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.5708" upper="1.5708" effort="10" velocity="1.0"/>
+  </joint>
+
+  <!-- Joint 2: Shoulder -->
+  <link name="link2">
+    <visual><origin xyz="0 0 0.075"/><geometry><cylinder radius="0.025" length="0.15"/></geometry><material name="grey"/></visual>
+    <collision><origin xyz="0 0 0.075"/><geometry><cylinder radius="0.025" length="0.15"/></geometry></collision>
+  </link>
+  <joint name="link1_to_link2" type="revolute">
+    <parent link="link1"/><child link="link2"/>
+    <origin xyz="0 0 0.10" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.5708" upper="1.5708" effort="10" velocity="1.0"/>
+  </joint>
+
+  <!-- Joint 3: Elbow -->
+  <link name="link3">
+    <visual><origin xyz="0 0 0.06"/><geometry><cylinder radius="0.02" length="0.12"/></geometry><material name="blue"/></visual>
+    <collision><origin xyz="0 0 0.06"/><geometry><cylinder radius="0.02" length="0.12"/></geometry></collision>
+  </link>
+  <joint name="link2_to_link3" type="revolute">
+    <parent link="link2"/><child link="link3"/>
+    <origin xyz="0 0 0.15" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.5708" upper="1.5708" effort="10" velocity="1.0"/>
+  </joint>
+
+  <!-- Joint 4: Wrist Pitch -->
+  <link name="link4">
+    <visual><origin xyz="0 0 0.04"/><geometry><cylinder radius="0.015" length="0.08"/></geometry><material name="grey"/></visual>
+    <collision><origin xyz="0 0 0.04"/><geometry><cylinder radius="0.015" length="0.08"/></geometry></collision>
+  </link>
+  <joint name="link3_to_link4" type="revolute">
+    <parent link="link3"/><child link="link4"/>
+    <origin xyz="0 0 0.12" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.5708" upper="1.5708" effort="5" velocity="1.0"/>
+  </joint>
+
+  <!-- Joint 5: Wrist Roll -->
+  <link name="link5">
+    <visual><origin xyz="0 0 0.03"/><geometry><cylinder radius="0.012" length="0.06"/></geometry><material name="blue"/></visual>
+    <collision><origin xyz="0 0 0.03"/><geometry><cylinder radius="0.012" length="0.06"/></geometry></collision>
+  </link>
+  <joint name="link4_to_link5" type="revolute">
+    <parent link="link4"/><child link="link5"/>
+    <origin xyz="0 0 0.08" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.5708" upper="1.5708" effort="5" velocity="1.0"/>
+  </joint>
+
+  <!-- Joint 6: Gripper -->
+  <link name="gripper_link">
+    <visual><origin xyz="0 0 0.02"/><geometry><box size="0.02 0.02 0.04"/></geometry><material name="grey"/></visual>
+    <collision><origin xyz="0 0 0.02"/><geometry><box size="0.02 0.02 0.04"/></geometry></collision>
+  </link>
+  <joint name="link5_to_gripper" type="revolute">
+    <parent link="link5"/><child link="gripper_link"/>
+    <origin xyz="0 0 0.06" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <limit lower="0" upper="1.0" effort="5" velocity="1.0"/>
+  </joint>
+
+</robot>
