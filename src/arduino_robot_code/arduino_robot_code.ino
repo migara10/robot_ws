@@ -32,7 +32,37 @@ void setServoAngle(int channel, float angle) {
   currentAngles[channel] = angle;
 }
 
-// Smooth move for home & manual commands
+// MoveIt CSV command ekakata - channels 6ma EKAVARA (parallel) interpolate karanawa.
+// Per-channel sequential loop eken command ekakata gaththa time eka (144ms wage)
+// Python side MIN_INTERVAL (120ms) ekata vada wadi wela, backlog + snapping una -
+// meken hema channel ekakma same steps loop eke, ekama delay set ekakin update wenawa.
+void moveAllServosSmooth(float targetAngles[NUM_SERVOS]) {
+  float diffs[NUM_SERVOS];
+  int maxSteps = 1;
+
+  for (int i = 0; i < NUM_SERVOS; i++) {
+    float target = constrain(targetAngles[i], MIN_ANGLES[i], MAX_ANGLES[i]);
+    diffs[i] = target - currentAngles[i];
+    int stepsNeeded = constrain((int)round(abs(diffs[i])), 1, 8);
+    if (stepsNeeded > maxSteps) maxSteps = stepsNeeded;
+  }
+
+  for (int s = 1; s <= maxSteps; s++) {
+    for (int i = 0; i < NUM_SERVOS; i++) {
+      if (abs(diffs[i]) < 0.3) continue;  // negligible change - skip
+      float stepAngle = currentAngles[i] + (diffs[i] * s / maxSteps);
+      pwm.setPWM(i, 0, angleToPulse(stepAngle));
+    }
+    delay(2);  // channels okkoma ekata - one delay per step, sum nowei
+  }
+
+  for (int i = 0; i < NUM_SERVOS; i++) {
+    float target = constrain(targetAngles[i], MIN_ANGLES[i], MAX_ANGLES[i]);
+    currentAngles[i] = target;
+  }
+}
+
+// Smooth move for home & manual single-joint commands
 void moveServoSmooth(int channel, int targetAngle) {
   targetAngle = constrain(targetAngle, MIN_ANGLES[channel], MAX_ANGLES[channel]);
   int startAngle = (int)currentAngles[channel];
@@ -74,9 +104,7 @@ void processCommand(char* str) {
     }
 
     if (parsedCount == NUM_SERVOS) {
-      for (int i = 0; i < NUM_SERVOS; i++) {
-        setServoAngle(i, angles[i]);
-      }
+      moveAllServosSmooth(angles);
     }
     return;
   }
@@ -96,7 +124,6 @@ void processCommand(char* str) {
 void setup() {
   Serial.begin(115200);
   Wire.begin();
-  
   // High-Speed I2C Communication (400kHz Fast Mode)
   Wire.setClock(400000);
 

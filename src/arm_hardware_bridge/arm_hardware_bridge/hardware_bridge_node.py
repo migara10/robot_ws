@@ -30,6 +30,9 @@ BAUD_RATE = 115200
 
 
 def rad_to_servo_deg(joint_name, rad_value):
+    """URDF joint value (radians) එකක් servo degree එකකට convert කරනවා.
+    Home (0 rad) සැමවිටම servo home angle එකටම map වෙනවා. 'invert' flag එකෙන්
+    direction-reversed joints (elbow, wrist pitch) handle කරනවා."""
     cfg = JOINT_CONFIG[joint_name]
     home_servo = cfg['home']
 
@@ -58,10 +61,10 @@ class HardwareBridgeNode(Node):
     def __init__(self):
         super().__init__('arm_hardware_bridge')
 
-        # Serial connection with LOW TIMEOUT to avoid blocking execution loop
+        # Serial connection with low read-timeout (write blocking වලට effect කරන්නේ නැහැ)
         try:
             self.serial_conn = serial.Serial(SERIAL_PORT, BAUD_RATE, timeout=0.001)
-            time.sleep(2.0)
+            time.sleep(2.0)  # Arduino reset වෙන්න/boot වෙන්න කාලය
             self.get_logger().info(f'Arduino connected on {SERIAL_PORT}')
         except serial.SerialException as e:
             self.get_logger().error(f'Serial connection failed: {e}')
@@ -81,9 +84,9 @@ class HardwareBridgeNode(Node):
         )
 
         self.joint_state_pub = self.create_publisher(JointState, 'joint_states', 10)
-        self.create_timer(0.02, self.publish_joint_states)  # Updated to 50 Hz for real-time monitoring
+        self.create_timer(0.02, self.publish_joint_states)  # 50 Hz
 
-        self.get_logger().info('Arm hardware bridge ready (High-Speed Mode).')
+        self.get_logger().info('Arm hardware bridge ready.')
 
     def publish_joint_states(self):
         msg = JointState()
@@ -94,6 +97,7 @@ class HardwareBridgeNode(Node):
         self.joint_state_pub.publish(msg)
 
     def send_serial_command(self, joint_positions: dict):
+        """joint_positions: {joint_name: radians} -> serial command string එකක් හදලා Arduinoට යවනවා"""
         servo_degrees = []
         for j in JOINT_ORDER:
             rad = joint_positions.get(j, self.current_positions[j])
@@ -129,19 +133,24 @@ class HardwareBridgeNode(Node):
 
         self.get_logger().info(f'Executing trajectory with {len(points)} points for {joint_names}')
 
+        MIN_INTERVAL = 0.04  # seconds - digital servo eken physically settle wenna denna kalaya
         start_time = time.perf_counter()
+        last_sent_time = -999.0
 
-        for point in points:
-            positions = dict(zip(joint_names, point.positions))
-            
-            # Absolute target execution timestamp calculated by MoveIt
+        for i, point in enumerate(points):
             target_time = point.time_from_start.sec + point.time_from_start.nanosec * 1e-9
+            is_last = (i == len(points) - 1)
 
-            # Precision wait to match exact MoveIt trajectory point timing
+            # Minimum interval eken adu gaps skip karanawa (last point matha hamadama send karanawa)
+            if not is_last and (target_time - last_sent_time) < MIN_INTERVAL:
+                continue
+
             while (time.perf_counter() - start_time) < target_time:
-                time.sleep(0.001)  # 1ms high-precision micro sleep
+                time.sleep(0.001)
 
+            positions = dict(zip(joint_names, point.positions))
             self.send_serial_command(positions)
+            last_sent_time = target_time
 
         goal_handle.succeed()
         result = FollowJointTrajectory.Result()
