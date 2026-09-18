@@ -1,14 +1,6 @@
-# ROS 2 build directories
-build/
-install/
-log/
+# Run Moveit
 
-# IDE and Editor specific files
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# Python cache
-__pycache__/
-*.pyc
+cd ~/robot_ws
+colcon build --packages-select arm_hardware_bridge
+source install/setup.bash
+ros2 launch arm_hardware_bridge real_hardware.launch.py

@@ -1,0 +1,1 @@
+/home/migara/robot_ws/src/arm_moveit_config/launch/moveit_rviz.launch.py

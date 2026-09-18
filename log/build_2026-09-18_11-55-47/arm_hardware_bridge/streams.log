@@ -1,0 +1,26 @@
+[1.979s] Invoking command in '/home/migara/robot_ws/build/arm_hardware_bridge': AMENT_PREFIX_PATH=/home/migara/robot_ws/install/arm_moveit_config:/home/migara/robot_ws/install/arm_description:/home/migara/robot_ws/install/arm_bringup:/opt/ros/jazzy CMAKE_PREFIX_PATH=/home/migara/robot_ws/install/arm_moveit_config:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/migara/robot_ws/build/arm_hardware_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/migara/robot_ws/install/arm_hardware_bridge/lib/python3.12/site-packages:/home/migara/robot_ws/build/arm_description:/home/migara/robot_ws/install/arm_description/lib/python3.12/site-packages:/home/migara/robot_ws/build/arm_bringup:/home/migara/robot_ws/install/arm_bringup/lib/python3.12/site-packages:/opt/ros/jazzy/opt/gz_sim_vendor/lib/python:/opt/ros/jazzy/opt/sdformat_vendor/lib/python:/opt/ros/jazzy/opt/gz_transport_vendor/lib/python:/opt/ros/jazzy/opt/gz_msgs_vendor/lib/python:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/migara/robot_ws/build/arm_hardware_bridge/build --no-deps symlink_data
+[2.521s] running develop
+[2.850s] running egg_info
+[2.850s] creating arm_hardware_bridge.egg-info
+[2.885s] writing arm_hardware_bridge.egg-info/PKG-INFO
+[2.886s] writing dependency_links to arm_hardware_bridge.egg-info/dependency_links.txt
+[2.886s] writing entry points to arm_hardware_bridge.egg-info/entry_points.txt
+[2.887s] writing requirements to arm_hardware_bridge.egg-info/requires.txt
+[2.887s] writing top-level names to arm_hardware_bridge.egg-info/top_level.txt
+[2.887s] writing manifest file 'arm_hardware_bridge.egg-info/SOURCES.txt'
+[2.957s] reading manifest file 'arm_hardware_bridge.egg-info/SOURCES.txt'
+[2.958s] writing manifest file 'arm_hardware_bridge.egg-info/SOURCES.txt'
+[2.993s] running build_ext
+[2.994s] Creating /home/migara/robot_ws/install/arm_hardware_bridge/lib/python3.12/site-packages/arm-hardware-bridge.egg-link (link to .)
+[2.994s] Installing hardware_bridge_node script to /home/migara/robot_ws/install/arm_hardware_bridge/lib/arm_hardware_bridge
+[2.994s] 
+[2.994s] Installed /home/migara/robot_ws/build/arm_hardware_bridge
+[2.995s] running symlink_data
+[2.995s] creating /home/migara/robot_ws/install/arm_hardware_bridge/share/ament_index
+[2.995s] creating /home/migara/robot_ws/install/arm_hardware_bridge/share/ament_index/resource_index
+[2.995s] creating /home/migara/robot_ws/install/arm_hardware_bridge/share/ament_index/resource_index/packages
+[2.995s] symbolically linking /home/migara/robot_ws/build/arm_hardware_bridge/resource/arm_hardware_bridge -> /home/migara/robot_ws/install/arm_hardware_bridge/share/ament_index/resource_index/packages
+[2.996s] symbolically linking /home/migara/robot_ws/build/arm_hardware_bridge/package.xml -> /home/migara/robot_ws/install/arm_hardware_bridge/share/arm_hardware_bridge
+[2.996s] creating /home/migara/robot_ws/install/arm_hardware_bridge/share/arm_hardware_bridge/launch
+[2.996s] symbolically linking /home/migara/robot_ws/build/arm_hardware_bridge/launch/real_hardware.launch.py -> /home/migara/robot_ws/install/arm_hardware_bridge/share/arm_hardware_bridge/launch
+[3.051s] Invoked command in '/home/migara/robot_ws/build/arm_hardware_bridge' returned '0': AMENT_PREFIX_PATH=/home/migara/robot_ws/install/arm_moveit_config:/home/migara/robot_ws/install/arm_description:/home/migara/robot_ws/install/arm_bringup:/opt/ros/jazzy CMAKE_PREFIX_PATH=/home/migara/robot_ws/install/arm_moveit_config:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/migara/robot_ws/build/arm_hardware_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/migara/robot_ws/install/arm_hardware_bridge/lib/python3.12/site-packages:/home/migara/robot_ws/build/arm_description:/home/migara/robot_ws/install/arm_description/lib/python3.12/site-packages:/home/migara/robot_ws/build/arm_bringup:/home/migara/robot_ws/install/arm_bringup/lib/python3.12/site-packages:/opt/ros/jazzy/opt/gz_sim_vendor/lib/python:/opt/ros/jazzy/opt/sdformat_vendor/lib/python:/opt/ros/jazzy/opt/gz_transport_vendor/lib/python:/opt/ros/jazzy/opt/gz_msgs_vendor/lib/python:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/migara/robot_ws/build/arm_hardware_bridge/build --no-deps symlink_data

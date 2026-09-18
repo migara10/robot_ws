@@ -1,0 +1,24 @@
+running develop
+running egg_info
+creating arm_hardware_bridge.egg-info
+writing arm_hardware_bridge.egg-info/PKG-INFO
+writing dependency_links to arm_hardware_bridge.egg-info/dependency_links.txt
+writing entry points to arm_hardware_bridge.egg-info/entry_points.txt
+writing requirements to arm_hardware_bridge.egg-info/requires.txt
+writing top-level names to arm_hardware_bridge.egg-info/top_level.txt
+writing manifest file 'arm_hardware_bridge.egg-info/SOURCES.txt'
+reading manifest file 'arm_hardware_bridge.egg-info/SOURCES.txt'
+writing manifest file 'arm_hardware_bridge.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/migara/robot_ws/install/arm_hardware_bridge/lib/python3.12/site-packages/arm-hardware-bridge.egg-link (link to .)
+Installing hardware_bridge_node script to /home/migara/robot_ws/install/arm_hardware_bridge/lib/arm_hardware_bridge
+
+Installed /home/migara/robot_ws/build/arm_hardware_bridge
+running symlink_data
+creating /home/migara/robot_ws/install/arm_hardware_bridge/share/ament_index
+creating /home/migara/robot_ws/install/arm_hardware_bridge/share/ament_index/resource_index
+creating /home/migara/robot_ws/install/arm_hardware_bridge/share/ament_index/resource_index/packages
+symbolically linking /home/migara/robot_ws/build/arm_hardware_bridge/resource/arm_hardware_bridge -> /home/migara/robot_ws/install/arm_hardware_bridge/share/ament_index/resource_index/packages
+symbolically linking /home/migara/robot_ws/build/arm_hardware_bridge/package.xml -> /home/migara/robot_ws/install/arm_hardware_bridge/share/arm_hardware_bridge
+creating /home/migara/robot_ws/install/arm_hardware_bridge/share/arm_hardware_bridge/launch
+symbolically linking /home/migara/robot_ws/build/arm_hardware_bridge/launch/real_hardware.launch.py -> /home/migara/robot_ws/install/arm_hardware_bridge/share/arm_hardware_bridge/launch
