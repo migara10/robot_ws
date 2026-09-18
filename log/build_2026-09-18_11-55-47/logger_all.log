@@ -1,0 +1,297 @@
+[0.268s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.268s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7bc51674e2a0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7bc51674d4c0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7bc51674d4c0>>, mixin_verb=('build',))
+[0.406s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.406s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.406s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.406s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.407s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.407s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.407s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/migara/robot_ws'
+[0.407s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.407s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.408s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.408s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.408s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.408s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.408s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.408s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.408s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.492s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.493s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.494s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.495s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.495s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.495s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.495s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.496s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.496s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.496s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.496s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.496s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.496s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(src/arduino_robot_code) by extensions ['ignore', 'ignore_ament_install']
+[0.498s] Level 1:colcon.colcon_core.package_identification:_identify(src/arduino_robot_code) by extension 'ignore'
+[0.498s] Level 1:colcon.colcon_core.package_identification:_identify(src/arduino_robot_code) by extension 'ignore_ament_install'
+[0.498s] Level 1:colcon.colcon_core.package_identification:_identify(src/arduino_robot_code) by extensions ['colcon_pkg']
+[0.498s] Level 1:colcon.colcon_core.package_identification:_identify(src/arduino_robot_code) by extension 'colcon_pkg'
+[0.498s] Level 1:colcon.colcon_core.package_identification:_identify(src/arduino_robot_code) by extensions ['colcon_meta']
+[0.499s] Level 1:colcon.colcon_core.package_identification:_identify(src/arduino_robot_code) by extension 'colcon_meta'
+[0.499s] Level 1:colcon.colcon_core.package_identification:_identify(src/arduino_robot_code) by extensions ['ros']
+[0.499s] Level 1:colcon.colcon_core.package_identification:_identify(src/arduino_robot_code) by extension 'ros'
+[0.499s] Level 1:colcon.colcon_core.package_identification:_identify(src/arduino_robot_code) by extensions ['cmake', 'python']
+[0.499s] Level 1:colcon.colcon_core.package_identification:_identify(src/arduino_robot_code) by extension 'cmake'
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(src/arduino_robot_code) by extension 'python'
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(src/arduino_robot_code) by extensions ['python_setup_py']
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(src/arduino_robot_code) by extension 'python_setup_py'
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_description) by extensions ['ignore', 'ignore_ament_install']
+[0.500s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_description) by extension 'ignore'
+[0.501s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_description) by extension 'ignore_ament_install'
+[0.501s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_description) by extensions ['colcon_pkg']
+[0.501s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_description) by extension 'colcon_pkg'
+[0.501s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_description) by extensions ['colcon_meta']
+[0.501s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_description) by extension 'colcon_meta'
+[0.501s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_description) by extensions ['ros']
+[0.501s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_description) by extension 'ros'
+[0.506s] DEBUG:colcon.colcon_core.package_identification:Package 'src/arm_description' with type 'ros.ament_python' and name 'arm_description'
+[0.506s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_hardware_bridge) by extensions ['ignore', 'ignore_ament_install']
+[0.506s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_hardware_bridge) by extension 'ignore'
+[0.507s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_hardware_bridge) by extension 'ignore_ament_install'
+[0.507s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_hardware_bridge) by extensions ['colcon_pkg']
+[0.507s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_hardware_bridge) by extension 'colcon_pkg'
+[0.507s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_hardware_bridge) by extensions ['colcon_meta']
+[0.507s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_hardware_bridge) by extension 'colcon_meta'
+[0.507s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_hardware_bridge) by extensions ['ros']
+[0.508s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_hardware_bridge) by extension 'ros'
+[0.510s] DEBUG:colcon.colcon_core.package_identification:Package 'src/arm_hardware_bridge' with type 'ros.ament_python' and name 'arm_hardware_bridge'
+[0.510s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_moveit_config) by extensions ['ignore', 'ignore_ament_install']
+[0.510s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_moveit_config) by extension 'ignore'
+[0.510s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_moveit_config) by extension 'ignore_ament_install'
+[0.510s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_moveit_config) by extensions ['colcon_pkg']
+[0.510s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_moveit_config) by extension 'colcon_pkg'
+[0.510s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_moveit_config) by extensions ['colcon_meta']
+[0.510s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_moveit_config) by extension 'colcon_meta'
+[0.511s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_moveit_config) by extensions ['ros']
+[0.511s] Level 1:colcon.colcon_core.package_identification:_identify(src/arm_moveit_config) by extension 'ros'
+[0.512s] DEBUG:colcon.colcon_core.package_identification:Package 'src/arm_moveit_config' with type 'ros.ament_cmake' and name 'arm_moveit_config'
+[0.513s] Level 1:colcon.colcon_core.package_identification:_identify(src/calibaration) by extensions ['ignore', 'ignore_ament_install']
+[0.513s] Level 1:colcon.colcon_core.package_identification:_identify(src/calibaration) by extension 'ignore'
+[0.513s] Level 1:colcon.colcon_core.package_identification:_identify(src/calibaration) by extension 'ignore_ament_install'
+[0.513s] Level 1:colcon.colcon_core.package_identification:_identify(src/calibaration) by extensions ['colcon_pkg']
+[0.513s] Level 1:colcon.colcon_core.package_identification:_identify(src/calibaration) by extension 'colcon_pkg'
+[0.514s] Level 1:colcon.colcon_core.package_identification:_identify(src/calibaration) by extensions ['colcon_meta']
+[0.514s] Level 1:colcon.colcon_core.package_identification:_identify(src/calibaration) by extension 'colcon_meta'
+[0.514s] Level 1:colcon.colcon_core.package_identification:_identify(src/calibaration) by extensions ['ros']
+[0.514s] Level 1:colcon.colcon_core.package_identification:_identify(src/calibaration) by extension 'ros'
+[0.514s] Level 1:colcon.colcon_core.package_identification:_identify(src/calibaration) by extensions ['cmake', 'python']
+[0.515s] Level 1:colcon.colcon_core.package_identification:_identify(src/calibaration) by extension 'cmake'
+[0.515s] Level 1:colcon.colcon_core.package_identification:_identify(src/calibaration) by extension 'python'
+[0.515s] Level 1:colcon.colcon_core.package_identification:_identify(src/calibaration) by extensions ['python_setup_py']
+[0.515s] Level 1:colcon.colcon_core.package_identification:_identify(src/calibaration) by extension 'python_setup_py'
+[0.515s] Level 1:colcon.colcon_core.package_identification:_identify(src/sketch_sep17a) by extensions ['ignore', 'ignore_ament_install']
+[0.516s] Level 1:colcon.colcon_core.package_identification:_identify(src/sketch_sep17a) by extension 'ignore'
+[0.516s] Level 1:colcon.colcon_core.package_identification:_identify(src/sketch_sep17a) by extension 'ignore_ament_install'
+[0.516s] Level 1:colcon.colcon_core.package_identification:_identify(src/sketch_sep17a) by extensions ['colcon_pkg']
+[0.516s] Level 1:colcon.colcon_core.package_identification:_identify(src/sketch_sep17a) by extension 'colcon_pkg'
+[0.516s] Level 1:colcon.colcon_core.package_identification:_identify(src/sketch_sep17a) by extensions ['colcon_meta']
+[0.516s] Level 1:colcon.colcon_core.package_identification:_identify(src/sketch_sep17a) by extension 'colcon_meta'
+[0.517s] Level 1:colcon.colcon_core.package_identification:_identify(src/sketch_sep17a) by extensions ['ros']
+[0.517s] Level 1:colcon.colcon_core.package_identification:_identify(src/sketch_sep17a) by extension 'ros'
+[0.517s] Level 1:colcon.colcon_core.package_identification:_identify(src/sketch_sep17a) by extensions ['cmake', 'python']
+[0.517s] Level 1:colcon.colcon_core.package_identification:_identify(src/sketch_sep17a) by extension 'cmake'
+[0.517s] Level 1:colcon.colcon_core.package_identification:_identify(src/sketch_sep17a) by extension 'python'
+[0.517s] Level 1:colcon.colcon_core.package_identification:_identify(src/sketch_sep17a) by extensions ['python_setup_py']
+[0.518s] Level 1:colcon.colcon_core.package_identification:_identify(src/sketch_sep17a) by extension 'python_setup_py'
+[0.518s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.518s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.518s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.518s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.518s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.556s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.556s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.558s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/migara/robot_ws/install/arm_bringup' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.558s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/migara/robot_ws/install/arm_description' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.560s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 0 installed packages in /home/migara/robot_ws/install
+[0.565s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 418 installed packages in /opt/ros/jazzy
+[0.571s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.846s] Level 5:colcon.colcon_core.verb:set package 'arm_description' build argument 'cmake_args' from command line to 'None'
+[0.847s] Level 5:colcon.colcon_core.verb:set package 'arm_description' build argument 'cmake_target' from command line to 'None'
+[0.847s] Level 5:colcon.colcon_core.verb:set package 'arm_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.847s] Level 5:colcon.colcon_core.verb:set package 'arm_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.847s] Level 5:colcon.colcon_core.verb:set package 'arm_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.847s] Level 5:colcon.colcon_core.verb:set package 'arm_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.848s] Level 5:colcon.colcon_core.verb:set package 'arm_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.848s] Level 5:colcon.colcon_core.verb:set package 'arm_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.848s] Level 5:colcon.colcon_core.verb:set package 'arm_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.848s] DEBUG:colcon.colcon_core.verb:Building package 'arm_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/migara/robot_ws/build/arm_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/migara/robot_ws/install/arm_description', 'merge_install': False, 'path': '/home/migara/robot_ws/src/arm_description', 'symlink_install': True, 'test_result_base': None}
+[0.849s] Level 5:colcon.colcon_core.verb:set package 'arm_moveit_config' build argument 'cmake_args' from command line to 'None'
+[0.849s] Level 5:colcon.colcon_core.verb:set package 'arm_moveit_config' build argument 'cmake_target' from command line to 'None'
+[0.849s] Level 5:colcon.colcon_core.verb:set package 'arm_moveit_config' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.849s] Level 5:colcon.colcon_core.verb:set package 'arm_moveit_config' build argument 'cmake_clean_cache' from command line to 'False'
+[0.849s] Level 5:colcon.colcon_core.verb:set package 'arm_moveit_config' build argument 'cmake_clean_first' from command line to 'False'
+[0.850s] Level 5:colcon.colcon_core.verb:set package 'arm_moveit_config' build argument 'cmake_force_configure' from command line to 'False'
+[0.850s] Level 5:colcon.colcon_core.verb:set package 'arm_moveit_config' build argument 'ament_cmake_args' from command line to 'None'
+[0.850s] Level 5:colcon.colcon_core.verb:set package 'arm_moveit_config' build argument 'catkin_cmake_args' from command line to 'None'
+[0.850s] Level 5:colcon.colcon_core.verb:set package 'arm_moveit_config' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.850s] DEBUG:colcon.colcon_core.verb:Building package 'arm_moveit_config' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/migara/robot_ws/build/arm_moveit_config', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/migara/robot_ws/install/arm_moveit_config', 'merge_install': False, 'path': '/home/migara/robot_ws/src/arm_moveit_config', 'symlink_install': True, 'test_result_base': None}
+[0.851s] Level 5:colcon.colcon_core.verb:set package 'arm_hardware_bridge' build argument 'cmake_args' from command line to 'None'
+[0.851s] Level 5:colcon.colcon_core.verb:set package 'arm_hardware_bridge' build argument 'cmake_target' from command line to 'None'
+[0.851s] Level 5:colcon.colcon_core.verb:set package 'arm_hardware_bridge' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.851s] Level 5:colcon.colcon_core.verb:set package 'arm_hardware_bridge' build argument 'cmake_clean_cache' from command line to 'False'
+[0.852s] Level 5:colcon.colcon_core.verb:set package 'arm_hardware_bridge' build argument 'cmake_clean_first' from command line to 'False'
+[0.852s] Level 5:colcon.colcon_core.verb:set package 'arm_hardware_bridge' build argument 'cmake_force_configure' from command line to 'False'
+[0.852s] Level 5:colcon.colcon_core.verb:set package 'arm_hardware_bridge' build argument 'ament_cmake_args' from command line to 'None'
+[0.852s] Level 5:colcon.colcon_core.verb:set package 'arm_hardware_bridge' build argument 'catkin_cmake_args' from command line to 'None'
+[0.852s] Level 5:colcon.colcon_core.verb:set package 'arm_hardware_bridge' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.854s] DEBUG:colcon.colcon_core.verb:Building package 'arm_hardware_bridge' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/migara/robot_ws/build/arm_hardware_bridge', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/migara/robot_ws/install/arm_hardware_bridge', 'merge_install': False, 'path': '/home/migara/robot_ws/src/arm_hardware_bridge', 'symlink_install': True, 'test_result_base': None}
+[0.854s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.858s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.859s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/migara/robot_ws/src/arm_description' with build type 'ament_python'
+[0.860s] Level 1:colcon.colcon_core.shell:create_environment_hook('arm_description', 'ament_prefix_path')
+[0.865s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.865s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/migara/robot_ws/install/arm_description/share/arm_description/hook/ament_prefix_path.ps1'
+[0.867s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/migara/robot_ws/install/arm_description/share/arm_description/hook/ament_prefix_path.dsv'
+[0.868s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/migara/robot_ws/install/arm_description/share/arm_description/hook/ament_prefix_path.sh'
+[0.869s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.870s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.301s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/migara/robot_ws/src/arm_description'
+[1.301s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.301s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.361s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: install_lib, test, easy_install, check, editable_wheel, bdist_wheel, update_catalog, sdist, build, saveopts, extract_messages, register, build_scripts, bdist_dumb, symlink_data, egg_info, bdist, install_egg_info, setopt, build_clib, build_ext, install_scripts, build_py, init_catalog, bdist_egg, clean, alias, upload_docs, install_headers, develop, bdist_rpm, install_data, upload, rotate, dist_info, compile_catalog, install
+[2.881s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools 'develop' options: --version, --uninstall, --build-directory, --site-dirs, --editable, --prefix, --index-url, --force-installation-into-system-dir, --local-snapshots-ok, --install-layout, --upgrade, --egg-path, --always-unzip, --multi-version, --no-deps, --user, --quiet, --script-dir, --exclude-scripts, --help, --zip-ok, --allow-hosts, --verbose, --always-copy, --optimize, --dry-run, --install-dir, --record, --find-links, --no-user-cfg, --no-find-links
+[2.884s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/migara/robot_ws/build/arm_description': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/migara/robot_ws/build/arm_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/migara/robot_ws/install/arm_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/migara/robot_ws/build/arm_description/build --no-deps symlink_data
+[3.866s] Level 1:colcon.colcon_core.shell:create_environment_hook('arm_description', 'pythonpath_develop')
+[3.867s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/migara/robot_ws/build/arm_description/share/arm_description/hook/pythonpath_develop.ps1'
+[3.867s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/migara/robot_ws/build/arm_description' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/migara/robot_ws/build/arm_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/migara/robot_ws/install/arm_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/migara/robot_ws/build/arm_description/build --no-deps symlink_data
+[3.868s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/migara/robot_ws/build/arm_description/share/arm_description/hook/pythonpath_develop.dsv'
+[3.868s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/migara/robot_ws/build/arm_description/share/arm_description/hook/pythonpath_develop.sh'
+[3.873s] Level 1:colcon.colcon_core.environment:checking '/home/migara/robot_ws/install/arm_description' for CMake module files
+[3.874s] Level 1:colcon.colcon_core.environment:checking '/home/migara/robot_ws/install/arm_description' for CMake config files
+[3.875s] Level 1:colcon.colcon_core.environment:checking '/home/migara/robot_ws/install/arm_description/lib'
+[3.875s] Level 1:colcon.colcon_core.environment:checking '/home/migara/robot_ws/install/arm_description/bin'
+[3.876s] Level 1:colcon.colcon_core.environment:checking '/home/migara/robot_ws/install/arm_description/lib/pkgconfig/arm_description.pc'
+[3.876s] Level 1:colcon.colcon_core.environment:checking '/home/migara/robot_ws/install/arm_description/lib/python3.12/site-packages'
+[3.876s] Level 1:colcon.colcon_core.shell:create_environment_hook('arm_description', 'pythonpath')
+[3.877s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/migara/robot_ws/install/arm_description/share/arm_description/hook/pythonpath.ps1'
+[3.877s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/migara/robot_ws/install/arm_description/share/arm_description/hook/pythonpath.dsv'
+[3.878s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/migara/robot_ws/install/arm_description/share/arm_description/hook/pythonpath.sh'
+[3.879s] Level 1:colcon.colcon_core.environment:checking '/home/migara/robot_ws/install/arm_description/bin'
+[3.879s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(arm_description)
+[3.879s] INFO:colcon.colcon_core.shell:Creating package script '/home/migara/robot_ws/install/arm_description/share/arm_description/package.ps1'
+[3.881s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/migara/robot_ws/install/arm_description/share/arm_description/package.dsv'
+[3.883s] INFO:colcon.colcon_core.shell:Creating package script '/home/migara/robot_ws/install/arm_description/share/arm_description/package.sh'
+[3.884s] INFO:colcon.colcon_core.shell:Creating package script '/home/migara/robot_ws/install/arm_description/share/arm_description/package.bash'
+[3.885s] INFO:colcon.colcon_core.shell:Creating package script '/home/migara/robot_ws/install/arm_description/share/arm_description/package.zsh'
+[3.886s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/migara/robot_ws/install/arm_description/share/colcon-core/packages/arm_description)
+[3.886s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/migara/robot_ws/src/arm_moveit_config' with build type 'ament_cmake'
+[3.886s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/migara/robot_ws/src/arm_moveit_config'
+[3.887s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.887s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.902s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/migara/robot_ws/build/arm_moveit_config': AMENT_PREFIX_PATH=/home/migara/robot_ws/install/arm_description:/home/migara/robot_ws/install/arm_bringup:/opt/ros/jazzy CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/migara/robot_ws/install/arm_bringup:/home/migara/robot_ws/install/arm_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/migara/robot_ws/build/arm_description:/home/migara/robot_ws/install/arm_description/lib/python3.12/site-packages:/home/migara/robot_ws/build/arm_bringup:/home/migara/robot_ws/install/arm_bringup/lib/python3.12/site-packages:/opt/ros/jazzy/opt/gz_sim_vendor/lib/python:/opt/ros/jazzy/opt/sdformat_vendor/lib/python:/opt/ros/jazzy/opt/gz_transport_vendor/lib/python:/opt/ros/jazzy/opt/gz_msgs_vendor/lib/python:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/cmake /home/migara/robot_ws/src/arm_moveit_config -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/migara/robot_ws/install/arm_moveit_config
+[5.419s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/migara/robot_ws/build/arm_moveit_config' returned '0': AMENT_PREFIX_PATH=/home/migara/robot_ws/install/arm_description:/home/migara/robot_ws/install/arm_bringup:/opt/ros/jazzy CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/migara/robot_ws/install/arm_bringup:/home/migara/robot_ws/install/arm_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/migara/robot_ws/build/arm_description:/home/migara/robot_ws/install/arm_description/lib/python3.12/site-packages:/home/migara/robot_ws/build/arm_bringup:/home/migara/robot_ws/install/arm_bringup/lib/python3.12/site-packages:/opt/ros/jazzy/opt/gz_sim_vendor/lib/python:/opt/ros/jazzy/opt/sdformat_vendor/lib/python:/opt/ros/jazzy/opt/gz_transport_vendor/lib/python:/opt/ros/jazzy/opt/gz_msgs_vendor/lib/python:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/cmake /home/migara/robot_ws/src/arm_moveit_config -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/migara/robot_ws/install/arm_moveit_config
+[5.421s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/migara/robot_ws/build/arm_moveit_config': AMENT_PREFIX_PATH=/home/migara/robot_ws/install/arm_description:/home/migara/robot_ws/install/arm_bringup:/opt/ros/jazzy CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/migara/robot_ws/install/arm_bringup:/home/migara/robot_ws/install/arm_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/migara/robot_ws/build/arm_description:/home/migara/robot_ws/install/arm_description/lib/python3.12/site-packages:/home/migara/robot_ws/build/arm_bringup:/home/migara/robot_ws/install/arm_bringup/lib/python3.12/site-packages:/opt/ros/jazzy/opt/gz_sim_vendor/lib/python:/opt/ros/jazzy/opt/sdformat_vendor/lib/python:/opt/ros/jazzy/opt/gz_transport_vendor/lib/python:/opt/ros/jazzy/opt/gz_msgs_vendor/lib/python:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/cmake --build /home/migara/robot_ws/build/arm_moveit_config -- -j4 -l4
+[5.510s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/migara/robot_ws/build/arm_moveit_config' returned '0': AMENT_PREFIX_PATH=/home/migara/robot_ws/install/arm_description:/home/migara/robot_ws/install/arm_bringup:/opt/ros/jazzy CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/migara/robot_ws/install/arm_bringup:/home/migara/robot_ws/install/arm_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/migara/robot_ws/build/arm_description:/home/migara/robot_ws/install/arm_description/lib/python3.12/site-packages:/home/migara/robot_ws/build/arm_bringup:/home/migara/robot_ws/install/arm_bringup/lib/python3.12/site-packages:/opt/ros/jazzy/opt/gz_sim_vendor/lib/python:/opt/ros/jazzy/opt/sdformat_vendor/lib/python:/opt/ros/jazzy/opt/gz_transport_vendor/lib/python:/opt/ros/jazzy/opt/gz_msgs_vendor/lib/python:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/cmake --build /home/migara/robot_ws/build/arm_moveit_config -- -j4 -l4
+[5.530s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/migara/robot_ws/build/arm_moveit_config': AMENT_PREFIX_PATH=/home/migara/robot_ws/install/arm_description:/home/migara/robot_ws/install/arm_bringup:/opt/ros/jazzy CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/migara/robot_ws/install/arm_bringup:/home/migara/robot_ws/install/arm_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/migara/robot_ws/build/arm_description:/home/migara/robot_ws/install/arm_description/lib/python3.12/site-packages:/home/migara/robot_ws/build/arm_bringup:/home/migara/robot_ws/install/arm_bringup/lib/python3.12/site-packages:/opt/ros/jazzy/opt/gz_sim_vendor/lib/python:/opt/ros/jazzy/opt/sdformat_vendor/lib/python:/opt/ros/jazzy/opt/gz_transport_vendor/lib/python:/opt/ros/jazzy/opt/gz_msgs_vendor/lib/python:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/cmake --install /home/migara/robot_ws/build/arm_moveit_config
+[6.150s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(arm_moveit_config)
+[6.150s] Level 1:colcon.colcon_core.environment:checking '/home/migara/robot_ws/install/arm_moveit_config' for CMake module files
+[6.151s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/migara/robot_ws/build/arm_moveit_config' returned '0': AMENT_PREFIX_PATH=/home/migara/robot_ws/install/arm_description:/home/migara/robot_ws/install/arm_bringup:/opt/ros/jazzy CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/migara/robot_ws/install/arm_bringup:/home/migara/robot_ws/install/arm_description:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/migara/robot_ws/build/arm_description:/home/migara/robot_ws/install/arm_description/lib/python3.12/site-packages:/home/migara/robot_ws/build/arm_bringup:/home/migara/robot_ws/install/arm_bringup/lib/python3.12/site-packages:/opt/ros/jazzy/opt/gz_sim_vendor/lib/python:/opt/ros/jazzy/opt/sdformat_vendor/lib/python:/opt/ros/jazzy/opt/gz_transport_vendor/lib/python:/opt/ros/jazzy/opt/gz_msgs_vendor/lib/python:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/cmake --install /home/migara/robot_ws/build/arm_moveit_config
+[6.151s] Level 1:colcon.colcon_core.environment:checking '/home/migara/robot_ws/install/arm_moveit_config' for CMake config files
+[6.152s] Level 1:colcon.colcon_core.shell:create_environment_hook('arm_moveit_config', 'cmake_prefix_path')
+[6.152s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/migara/robot_ws/install/arm_moveit_config/share/arm_moveit_config/hook/cmake_prefix_path.ps1'
+[6.152s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/migara/robot_ws/install/arm_moveit_config/share/arm_moveit_config/hook/cmake_prefix_path.dsv'
+[6.153s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/migara/robot_ws/install/arm_moveit_config/share/arm_moveit_config/hook/cmake_prefix_path.sh'
+[6.154s] Level 1:colcon.colcon_core.environment:checking '/home/migara/robot_ws/install/arm_moveit_config/bin'
+[6.154s] Level 1:colcon.colcon_core.environment:checking '/home/migara/robot_ws/install/arm_moveit_config/lib/pkgconfig/arm_moveit_config.pc'
+[6.154s] Level 1:colcon.colcon_core.environment:checking '/home/migara/robot_ws/install/arm_moveit_config/lib/python3.12/site-packages'
+[6.155s] Level 1:colcon.colcon_core.environment:checking '/home/migara/robot_ws/install/arm_moveit_config/bin'
+[6.155s] INFO:colcon.colcon_core.shell:Creating package script '/home/migara/robot_ws/install/arm_moveit_config/share/arm_moveit_config/package.ps1'
+[6.156s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/migara/robot_ws/install/arm_moveit_config/share/arm_moveit_config/package.dsv'
+[6.156s] INFO:colcon.colcon_core.shell:Creating package script '/home/migara/robot_ws/install/arm_moveit_config/share/arm_moveit_config/package.sh'
+[6.157s] INFO:colcon.colcon_core.shell:Creating package script '/home/migara/robot_ws/install/arm_moveit_config/share/arm_moveit_config/package.bash'
+[6.157s] INFO:colcon.colcon_core.shell:Creating package script '/home/migara/robot_ws/install/arm_moveit_config/share/arm_moveit_config/package.zsh'
+[6.157s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/migara/robot_ws/install/arm_moveit_config/share/colcon-core/packages/arm_moveit_config)
+[6.158s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(arm_moveit_config)
+[6.158s] Level 1:colcon.colcon_core.environment:checking '/home/migara/robot_ws/install/arm_moveit_config' for CMake module files
+[6.159s] Level 1:colcon.colcon_core.environment:checking '/home/migara/robot_ws/install/arm_moveit_config' for CMake config files
+[6.160s] Level 1:colcon.colcon_core.shell:create_environment_hook('arm_moveit_config', 'cmake_prefix_path')
+[6.160s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/migara/robot_ws/install/arm_moveit_config/share/arm_moveit_config/hook/cmake_prefix_path.ps1'
+[6.160s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/migara/robot_ws/install/arm_moveit_config/share/arm_moveit_config/hook/cmake_prefix_path.dsv'
+[6.161s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/migara/robot_ws/install/arm_moveit_config/share/arm_moveit_config/hook/cmake_prefix_path.sh'
+[6.162s] Level 1:colcon.colcon_core.environment:checking '/home/migara/robot_ws/install/arm_moveit_config/bin'
+[6.162s] Level 1:colcon.colcon_core.environment:checking '/home/migara/robot_ws/install/arm_moveit_config/lib/pkgconfig/arm_moveit_config.pc'
+[6.162s] Level 1:colcon.colcon_core.environment:checking '/home/migara/robot_ws/install/arm_moveit_config/lib/python3.12/site-packages'
+[6.162s] Level 1:colcon.colcon_core.environment:checking '/home/migara/robot_ws/install/arm_moveit_config/bin'
+[6.163s] INFO:colcon.colcon_core.shell:Creating package script '/home/migara/robot_ws/install/arm_moveit_config/share/arm_moveit_config/package.ps1'
+[6.164s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/migara/robot_ws/install/arm_moveit_config/share/arm_moveit_config/package.dsv'
+[6.164s] INFO:colcon.colcon_core.shell:Creating package script '/home/migara/robot_ws/install/arm_moveit_config/share/arm_moveit_config/package.sh'
+[6.165s] INFO:colcon.colcon_core.shell:Creating package script '/home/migara/robot_ws/install/arm_moveit_config/share/arm_moveit_config/package.bash'
+[6.165s] INFO:colcon.colcon_core.shell:Creating package script '/home/migara/robot_ws/install/arm_moveit_config/share/arm_moveit_config/package.zsh'
+[6.166s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/migara/robot_ws/install/arm_moveit_config/share/colcon-core/packages/arm_moveit_config)
+[6.166s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/migara/robot_ws/src/arm_hardware_bridge' with build type 'ament_python'
+[6.167s] Level 1:colcon.colcon_core.shell:create_environment_hook('arm_hardware_bridge', 'ament_prefix_path')
+[6.167s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/migara/robot_ws/install/arm_hardware_bridge/share/arm_hardware_bridge/hook/ament_prefix_path.ps1'
+[6.168s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/migara/robot_ws/install/arm_hardware_bridge/share/arm_hardware_bridge/hook/ament_prefix_path.dsv'
+[6.169s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/migara/robot_ws/install/arm_hardware_bridge/share/arm_hardware_bridge/hook/ament_prefix_path.sh'
+[6.169s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[6.169s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[6.512s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/migara/robot_ws/src/arm_hardware_bridge'
+[6.513s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[6.513s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[7.584s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: install_lib, test, easy_install, check, editable_wheel, bdist_wheel, update_catalog, sdist, build, saveopts, extract_messages, register, build_scripts, bdist_dumb, symlink_data, egg_info, bdist, install_egg_info, setopt, build_clib, build_ext, install_scripts, build_py, init_catalog, bdist_egg, clean, alias, upload_docs, install_headers, develop, bdist_rpm, install_data, upload, rotate, dist_info, compile_catalog, install
+[8.144s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools 'develop' options: --version, --uninstall, --build-directory, --site-dirs, --editable, --prefix, --index-url, --force-installation-into-system-dir, --local-snapshots-ok, --install-layout, --upgrade, --egg-path, --always-unzip, --multi-version, --no-deps, --user, --quiet, --script-dir, --exclude-scripts, --help, --zip-ok, --allow-hosts, --verbose, --always-copy, --optimize, --dry-run, --install-dir, --record, --find-links, --no-user-cfg, --no-find-links
+[8.147s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/migara/robot_ws/build/arm_hardware_bridge': AMENT_PREFIX_PATH=/home/migara/robot_ws/install/arm_moveit_config:/home/migara/robot_ws/install/arm_description:/home/migara/robot_ws/install/arm_bringup:/opt/ros/jazzy CMAKE_PREFIX_PATH=/home/migara/robot_ws/install/arm_moveit_config:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/migara/robot_ws/build/arm_hardware_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/migara/robot_ws/install/arm_hardware_bridge/lib/python3.12/site-packages:/home/migara/robot_ws/build/arm_description:/home/migara/robot_ws/install/arm_description/lib/python3.12/site-packages:/home/migara/robot_ws/build/arm_bringup:/home/migara/robot_ws/install/arm_bringup/lib/python3.12/site-packages:/opt/ros/jazzy/opt/gz_sim_vendor/lib/python:/opt/ros/jazzy/opt/sdformat_vendor/lib/python:/opt/ros/jazzy/opt/gz_transport_vendor/lib/python:/opt/ros/jazzy/opt/gz_msgs_vendor/lib/python:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/migara/robot_ws/build/arm_hardware_bridge/build --no-deps symlink_data
+[9.218s] Level 1:colcon.colcon_core.shell:create_environment_hook('arm_hardware_bridge', 'pythonpath_develop')
+[9.219s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/migara/robot_ws/build/arm_hardware_bridge/share/arm_hardware_bridge/hook/pythonpath_develop.ps1'
+[9.219s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/migara/robot_ws/build/arm_hardware_bridge' returned '0': AMENT_PREFIX_PATH=/home/migara/robot_ws/install/arm_moveit_config:/home/migara/robot_ws/install/arm_description:/home/migara/robot_ws/install/arm_bringup:/opt/ros/jazzy CMAKE_PREFIX_PATH=/home/migara/robot_ws/install/arm_moveit_config:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/migara/robot_ws/build/arm_hardware_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/migara/robot_ws/install/arm_hardware_bridge/lib/python3.12/site-packages:/home/migara/robot_ws/build/arm_description:/home/migara/robot_ws/install/arm_description/lib/python3.12/site-packages:/home/migara/robot_ws/build/arm_bringup:/home/migara/robot_ws/install/arm_bringup/lib/python3.12/site-packages:/opt/ros/jazzy/opt/gz_sim_vendor/lib/python:/opt/ros/jazzy/opt/sdformat_vendor/lib/python:/opt/ros/jazzy/opt/gz_transport_vendor/lib/python:/opt/ros/jazzy/opt/gz_msgs_vendor/lib/python:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/migara/robot_ws/build/arm_hardware_bridge/build --no-deps symlink_data
+[9.220s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/migara/robot_ws/build/arm_hardware_bridge/share/arm_hardware_bridge/hook/pythonpath_develop.dsv'
+[9.221s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/migara/robot_ws/build/arm_hardware_bridge/share/arm_hardware_bridge/hook/pythonpath_develop.sh'
+[9.222s] Level 1:colcon.colcon_core.environment:checking '/home/migara/robot_ws/install/arm_hardware_bridge' for CMake module files
+[9.223s] Level 1:colcon.colcon_core.environment:checking '/home/migara/robot_ws/install/arm_hardware_bridge' for CMake config files
+[9.223s] Level 1:colcon.colcon_core.environment:checking '/home/migara/robot_ws/install/arm_hardware_bridge/lib'
+[9.223s] Level 1:colcon.colcon_core.environment:checking '/home/migara/robot_ws/install/arm_hardware_bridge/bin'
+[9.224s] Level 1:colcon.colcon_core.environment:checking '/home/migara/robot_ws/install/arm_hardware_bridge/lib/pkgconfig/arm_hardware_bridge.pc'
+[9.224s] Level 1:colcon.colcon_core.environment:checking '/home/migara/robot_ws/install/arm_hardware_bridge/lib/python3.12/site-packages'
+[9.224s] Level 1:colcon.colcon_core.shell:create_environment_hook('arm_hardware_bridge', 'pythonpath')
+[9.224s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/migara/robot_ws/install/arm_hardware_bridge/share/arm_hardware_bridge/hook/pythonpath.ps1'
+[9.225s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/migara/robot_ws/install/arm_hardware_bridge/share/arm_hardware_bridge/hook/pythonpath.dsv'
+[9.225s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/migara/robot_ws/install/arm_hardware_bridge/share/arm_hardware_bridge/hook/pythonpath.sh'
+[9.226s] Level 1:colcon.colcon_core.environment:checking '/home/migara/robot_ws/install/arm_hardware_bridge/bin'
+[9.227s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(arm_hardware_bridge)
+[9.227s] INFO:colcon.colcon_core.shell:Creating package script '/home/migara/robot_ws/install/arm_hardware_bridge/share/arm_hardware_bridge/package.ps1'
+[9.228s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/migara/robot_ws/install/arm_hardware_bridge/share/arm_hardware_bridge/package.dsv'
+[9.229s] INFO:colcon.colcon_core.shell:Creating package script '/home/migara/robot_ws/install/arm_hardware_bridge/share/arm_hardware_bridge/package.sh'
+[9.229s] INFO:colcon.colcon_core.shell:Creating package script '/home/migara/robot_ws/install/arm_hardware_bridge/share/arm_hardware_bridge/package.bash'
+[9.230s] INFO:colcon.colcon_core.shell:Creating package script '/home/migara/robot_ws/install/arm_hardware_bridge/share/arm_hardware_bridge/package.zsh'
+[9.230s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/migara/robot_ws/install/arm_hardware_bridge/share/colcon-core/packages/arm_hardware_bridge)
+[9.231s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[9.231s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[9.231s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[9.232s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[9.242s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[9.242s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[9.242s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[9.262s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[9.263s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/migara/robot_ws/install/local_setup.ps1'
+[9.265s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/migara/robot_ws/install/_local_setup_util_ps1.py'
+[9.269s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/migara/robot_ws/install/setup.ps1'
+[9.271s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/migara/robot_ws/install/local_setup.sh'
+[9.272s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/migara/robot_ws/install/_local_setup_util_sh.py'
+[9.274s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/migara/robot_ws/install/setup.sh'
+[9.276s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/migara/robot_ws/install/local_setup.bash'
+[9.278s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/migara/robot_ws/install/setup.bash'
+[9.280s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/migara/robot_ws/install/local_setup.zsh'
+[9.281s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/migara/robot_ws/install/setup.zsh'

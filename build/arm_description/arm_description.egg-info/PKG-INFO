@@ -1,7 +1,7 @@
 Metadata-Version: 2.1
 Name: arm-description
 Version: 0.0.0
-Summary: 6DOF arm URDF/xacro description
-Maintainer: migara
-Maintainer-email: migara@todo.todo
+Summary: 6DOF arm URDF description
+Maintainer: your_name
+Maintainer-email: you@example.com
 License: Apache-2.0

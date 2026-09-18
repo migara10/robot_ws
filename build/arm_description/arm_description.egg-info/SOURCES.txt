@@ -5,9 +5,10 @@ arm_description/__init__.py
 arm_description.egg-info/PKG-INFO
 arm_description.egg-info/SOURCES.txt
 arm_description.egg-info/dependency_links.txt
-arm_description.egg-info/entry_points.txt
 arm_description.egg-info/requires.txt
 arm_description.egg-info/top_level.txt
 arm_description.egg-info/zip-safe
+launch/display.launch.py
 resource/arm_description
-urdf/arm.xacro
+rviz/display.rviz
+urdf/arm.urdf.xacro
