@@ -1,0 +1,24 @@
+[1.411s] Invoking command in '/home/migara/robot_ws/src/arm_hardware_bridge': AMENT_PREFIX_PATH=/home/migara/robot_ws/install/arm_moveit_config:/home/migara/robot_ws/install/arm_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/migara/robot_ws/install/arm_moveit_config:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/migara/robot_ws/build/arm_hardware_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/migara/robot_ws/install/arm_hardware_bridge/lib/python3.12/site-packages:/home/migara/robot_ws/build/arm_description:/home/migara/robot_ws/install/arm_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/arm_hardware_bridge build --build-base /home/migara/robot_ws/build/arm_hardware_bridge/build install --record /home/migara/robot_ws/build/arm_hardware_bridge/install.log --install-scripts $base/lib/arm_hardware_bridge --single-version-externally-managed install_data
+[1.825s] running egg_info
+[1.861s] writing ../../build/arm_hardware_bridge/arm_hardware_bridge.egg-info/PKG-INFO
+[1.862s] writing dependency_links to ../../build/arm_hardware_bridge/arm_hardware_bridge.egg-info/dependency_links.txt
+[1.862s] writing entry points to ../../build/arm_hardware_bridge/arm_hardware_bridge.egg-info/entry_points.txt
+[1.862s] writing requirements to ../../build/arm_hardware_bridge/arm_hardware_bridge.egg-info/requires.txt
+[1.862s] writing top-level names to ../../build/arm_hardware_bridge/arm_hardware_bridge.egg-info/top_level.txt
+[1.927s] reading manifest file '../../build/arm_hardware_bridge/arm_hardware_bridge.egg-info/SOURCES.txt'
+[1.929s] writing manifest file '../../build/arm_hardware_bridge/arm_hardware_bridge.egg-info/SOURCES.txt'
+[1.929s] running build
+[1.930s] running build_py
+[1.930s] copying arm_hardware_bridge/hardware_bridge_node.py -> /home/migara/robot_ws/build/arm_hardware_bridge/build/lib/arm_hardware_bridge
+[1.930s] running install
+[1.943s] running install_lib
+[1.978s] copying /home/migara/robot_ws/build/arm_hardware_bridge/build/lib/arm_hardware_bridge/hardware_bridge_node.py -> /home/migara/robot_ws/install/arm_hardware_bridge/lib/python3.12/site-packages/arm_hardware_bridge
+[1.979s] byte-compiling /home/migara/robot_ws/install/arm_hardware_bridge/lib/python3.12/site-packages/arm_hardware_bridge/hardware_bridge_node.py to hardware_bridge_node.cpython-312.pyc
+[1.982s] running install_data
+[1.982s] running install_egg_info
+[2.016s] removing '/home/migara/robot_ws/install/arm_hardware_bridge/lib/python3.12/site-packages/arm_hardware_bridge-0.0.0-py3.12.egg-info' (and everything under it)
+[2.016s] Copying ../../build/arm_hardware_bridge/arm_hardware_bridge.egg-info to /home/migara/robot_ws/install/arm_hardware_bridge/lib/python3.12/site-packages/arm_hardware_bridge-0.0.0-py3.12.egg-info
+[2.019s] running install_scripts
+[2.229s] Installing hardware_bridge_node script to /home/migara/robot_ws/install/arm_hardware_bridge/lib/arm_hardware_bridge
+[2.230s] writing list of installed files to '/home/migara/robot_ws/build/arm_hardware_bridge/install.log'
+[2.275s] Invoked command in '/home/migara/robot_ws/src/arm_hardware_bridge' returned '0': AMENT_PREFIX_PATH=/home/migara/robot_ws/install/arm_moveit_config:/home/migara/robot_ws/install/arm_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/migara/robot_ws/install/arm_moveit_config:${CMAKE_PREFIX_PATH} DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/migara/robot_ws/build/arm_hardware_bridge/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/migara/robot_ws/install/arm_hardware_bridge/lib/python3.12/site-packages:/home/migara/robot_ws/build/arm_description:/home/migara/robot_ws/install/arm_description/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/arm_hardware_bridge build --build-base /home/migara/robot_ws/build/arm_hardware_bridge/build install --record /home/migara/robot_ws/build/arm_hardware_bridge/install.log --install-scripts $base/lib/arm_hardware_bridge --single-version-externally-managed install_data

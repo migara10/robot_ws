@@ -1,0 +1,33 @@
+running develop
+Removing /home/migara/robot_ws/install/arm_hardware_bridge/lib/python3.12/site-packages/arm-hardware-bridge.egg-link (link to .)
+running egg_info
+writing ../../build/arm_hardware_bridge/arm_hardware_bridge.egg-info/PKG-INFO
+writing dependency_links to ../../build/arm_hardware_bridge/arm_hardware_bridge.egg-info/dependency_links.txt
+writing entry points to ../../build/arm_hardware_bridge/arm_hardware_bridge.egg-info/entry_points.txt
+writing requirements to ../../build/arm_hardware_bridge/arm_hardware_bridge.egg-info/requires.txt
+writing top-level names to ../../build/arm_hardware_bridge/arm_hardware_bridge.egg-info/top_level.txt
+reading manifest file '../../build/arm_hardware_bridge/arm_hardware_bridge.egg-info/SOURCES.txt'
+writing manifest file '../../build/arm_hardware_bridge/arm_hardware_bridge.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/migara/robot_ws/build/arm_hardware_bridge/build
+creating /home/migara/robot_ws/build/arm_hardware_bridge/build/lib
+creating /home/migara/robot_ws/build/arm_hardware_bridge/build/lib/arm_hardware_bridge
+copying arm_hardware_bridge/hardware_bridge_node.py -> /home/migara/robot_ws/build/arm_hardware_bridge/build/lib/arm_hardware_bridge
+copying arm_hardware_bridge/__init__.py -> /home/migara/robot_ws/build/arm_hardware_bridge/build/lib/arm_hardware_bridge
+running install
+running install_lib
+creating /home/migara/robot_ws/install/arm_hardware_bridge/lib/python3.12/site-packages/arm_hardware_bridge
+copying /home/migara/robot_ws/build/arm_hardware_bridge/build/lib/arm_hardware_bridge/hardware_bridge_node.py -> /home/migara/robot_ws/install/arm_hardware_bridge/lib/python3.12/site-packages/arm_hardware_bridge
+copying /home/migara/robot_ws/build/arm_hardware_bridge/build/lib/arm_hardware_bridge/__init__.py -> /home/migara/robot_ws/install/arm_hardware_bridge/lib/python3.12/site-packages/arm_hardware_bridge
+byte-compiling /home/migara/robot_ws/install/arm_hardware_bridge/lib/python3.12/site-packages/arm_hardware_bridge/hardware_bridge_node.py to hardware_bridge_node.cpython-312.pyc
+byte-compiling /home/migara/robot_ws/install/arm_hardware_bridge/lib/python3.12/site-packages/arm_hardware_bridge/__init__.py to __init__.cpython-312.pyc
+running install_data
+copying resource/arm_hardware_bridge -> /home/migara/robot_ws/install/arm_hardware_bridge/share/ament_index/resource_index/packages
+copying package.xml -> /home/migara/robot_ws/install/arm_hardware_bridge/share/arm_hardware_bridge
+copying launch/real_hardware.launch.py -> /home/migara/robot_ws/install/arm_hardware_bridge/share/arm_hardware_bridge/launch
+running install_egg_info
+Copying ../../build/arm_hardware_bridge/arm_hardware_bridge.egg-info to /home/migara/robot_ws/install/arm_hardware_bridge/lib/python3.12/site-packages/arm_hardware_bridge-0.0.0-py3.12.egg-info
+running install_scripts
+Installing hardware_bridge_node script to /home/migara/robot_ws/install/arm_hardware_bridge/lib/arm_hardware_bridge
+writing list of installed files to '/home/migara/robot_ws/build/arm_hardware_bridge/install.log'
