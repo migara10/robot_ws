@@ -18,7 +18,8 @@ const int MAX_ANGLES[NUM_SERVOS] = {160, 135, 180, 180, 180, 75};
 float currentAngles[NUM_SERVOS] = {90, 90, 90, 90, 90, 40};
 
 int angleToPulse(float angle) {
-  return map((int)angle, 0, 180, SERVOMIN, SERVOMAX);
+  float pulse = SERVOMIN + (angle / 180.0) * (SERVOMAX - SERVOMIN);
+  return (int)(pulse + 0.5);  // round, not truncate
 }
 
 void setServoAngle(int channel, float angle) {

@@ -11,14 +11,14 @@ from sensor_msgs.msg import JointState
 
 
 # ---- ඔයාගේ 6DOF arm එකේ calibration values (physical servo limits) ----
-# Format: joint_name -> (servo_channel, urdf_min_rad, urdf_max_rad, servo_min_deg, servo_max_deg)
+# Format: joint_name -> (servo_channel, urdf_min_rad, urdf_max_rad, servo_min_deg, servo_max_deg, invert)
 JOINT_CONFIG = {
-    'base_to_link1':   {'channel': 0, 'urdf_min': -1.5708, 'urdf_max': 1.5708, 'servo_min': 0,  'servo_max': 160, 'home': 90},
-    'link1_to_link2':  {'channel': 1, 'urdf_min': -1.5708, 'urdf_max': 1.5708, 'servo_min': 35, 'servo_max': 135, 'home': 90},
-    'link2_to_link3':  {'channel': 2, 'urdf_min': -1.5708, 'urdf_max': 1.5708, 'servo_min': 0,  'servo_max': 180, 'home': 90},
-    'link3_to_link4':  {'channel': 3, 'urdf_min': -1.5708, 'urdf_max': 1.5708, 'servo_min': 0,  'servo_max': 180, 'home': 90},
-    'link4_to_link5':  {'channel': 4, 'urdf_min': -1.5708, 'urdf_max': 1.5708, 'servo_min': 0,  'servo_max': 180, 'home': 90},
-    'link5_to_gripper':{'channel': 5, 'urdf_min': 0.0,     'urdf_max': 1.0,    'servo_min': 40, 'servo_max': 75,  'home': 40},
+    'base_to_link1':   {'channel': 0, 'urdf_min': -1.5708, 'urdf_max': 1.5708, 'servo_min': 0,  'servo_max': 160, 'home': 90, 'invert': False},
+    'link1_to_link2':  {'channel': 1, 'urdf_min': -1.5708, 'urdf_max': 1.5708, 'servo_min': 35, 'servo_max': 135, 'home': 90, 'invert': False},
+    'link2_to_link3':  {'channel': 2, 'urdf_min': -1.5708, 'urdf_max': 1.5708, 'servo_min': 0,  'servo_max': 180, 'home': 90, 'invert': True},
+    'link3_to_link4':  {'channel': 3, 'urdf_min': -1.5708, 'urdf_max': 1.5708, 'servo_min': 0,  'servo_max': 180, 'home': 90, 'invert': True},
+    'link4_to_link5':  {'channel': 4, 'urdf_min': -1.5708, 'urdf_max': 1.5708, 'servo_min': 0,  'servo_max': 180, 'home': 90, 'invert': False},
+    'link5_to_gripper':{'channel': 5, 'urdf_min': 0.0,     'urdf_max': 1.0,    'servo_min': 40, 'servo_max': 75,  'home': 40, 'invert': False},
 }
 
 JOINT_ORDER = [
@@ -34,12 +34,15 @@ def rad_to_servo_deg(joint_name, rad_value):
     """URDF joint value (radians) එකක් servo degree එකකට convert කරනවා.
     Home (0 rad) සැමවිටම servo home angle එකටම (90/40) map වෙනවා - asymmetric
     calibrated ranges (0-160, 35-135 වගේ) වලදීත් RViz simulation එකයි real
-    arm එකයි align වෙන්න."""
+    arm එකයි align වෙන්න. 'invert' flag එකෙන් direction-reversed joints
+    (elbow, wrist pitch වගේ) handle කරනවා."""
     cfg = JOINT_CONFIG[joint_name]
     home_servo = cfg['home']
 
+    if cfg.get('invert', False):
+        rad_value = -rad_value
+
     if rad_value >= 0:
-        # 0 -> urdf_max maps to home_servo -> servo_max
         urdf_range = cfg['urdf_max']
         servo_range = cfg['servo_max'] - home_servo
         if urdf_range == 0:
@@ -47,12 +50,11 @@ def rad_to_servo_deg(joint_name, rad_value):
         ratio = rad_value / urdf_range
         servo_deg = home_servo + ratio * servo_range
     else:
-        # urdf_min -> 0 maps to servo_min -> home_servo
         urdf_range = cfg['urdf_min']
         servo_range = home_servo - cfg['servo_min']
         if urdf_range == 0:
             return home_servo
-        ratio = rad_value / urdf_range   # rad_value සහ urdf_range දෙකම negative, ratio positive
+        ratio = rad_value / urdf_range
         servo_deg = home_servo - ratio * servo_range
 
     return max(cfg['servo_min'], min(cfg['servo_max'], servo_deg))
@@ -140,7 +142,7 @@ class HardwareBridgeNode(Node):
             point_time = point.time_from_start.sec + point.time_from_start.nanosec * 1e-9
             wait_time = max(0.0, point_time - prev_time)
             prev_time = point_time
-            time.sleep(wait_time)  # joint_state publisher timer eka (venam thread eke) block karanne naha
+            time.sleep(wait_time)
 
         goal_handle.succeed()
         result = FollowJointTrajectory.Result()
