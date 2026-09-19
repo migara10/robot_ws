@@ -1,1 +1,0 @@
-/home/migara/robot_ws/src/arm_description/launch/display.launch.py
