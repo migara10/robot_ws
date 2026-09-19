@@ -1,2 +1,0 @@
-[console_scripts]
-hardware_bridge_node = arm_hardware_bridge.hardware_bridge_node:main
