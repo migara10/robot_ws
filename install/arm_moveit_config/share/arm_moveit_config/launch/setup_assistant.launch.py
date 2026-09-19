@@ -1,1 +1,0 @@
-/home/migara/robot_ws/src/arm_moveit_config/launch/setup_assistant.launch.py
